@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/background.jpg') no-repeat center center fixed; /* Your background.jpg */
+    background-size: cover;
+    background-blend-mode: overlay;
+    background: linear-gradient(to bottom, rgba(255, 105, 180, 0.7), rgba(255, 215, 0, 0.7)), url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#countdown-container {
+    margin: 50px auto;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#countdown {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#surprise {
+    margin-top: 50px;
+}
+
+#notes {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slides-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+#fireworks-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Vibration effect */
+.vibrate {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}

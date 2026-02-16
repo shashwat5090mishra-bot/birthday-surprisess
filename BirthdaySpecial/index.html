@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise!</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add canvas-confetti for enhanced fireworks -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="countdown-container">
+        <h1>Countdown to Your Special Day!</h1>
+        <div id="countdown">Loading...</div>
+        <p>Enter the secret password to unlock the surprise:</p>
+        <input type="password" id="password-input" placeholder="Password">
+        <button id="unlock-btn">Unlock</button>
+    </div>
+
+    <div id="surprise" style="display: none;">
+        <h2>Happy Birthday! 🎉</h2>
+        <p id="vibrate-message">Feel the magic... (Your device might vibrate!)</p>
+        <canvas id="fireworks-canvas"></canvas> <!-- Fireworks canvas -->
+        
+        <h3>Notes About You</h3>
+        <div id="notes">
+            <p>From the moment I met you, you've lit up my world like a thousand stars. Your smile is my favorite sunrise, and your laugh is the melody I hum to myself. I promised this would be your best birthday, and I hope this surprise shows just how much you mean to me. You've been my secret inspiration, my quiet joy. Happy birthday, my love—you deserve all the happiness in the world.</p>
+            <!-- Add 20+ more personalized notes here -->
+            <p>Remember that time we [insert memory]? It made me realize how special you are.</p>
+            <p>Your kindness, your strength, your [positive trait]—I admire it all.</p>
+        </div>
+
+        <h3>All Photos of You (Slideshow)</h3>
+        <div id="photos">
+            <div class="slideshow-container">
+                <div class="slides-wrapper">
+                    <!-- Childhood photos first -->
+                    <img class="slide" src="images/child1.jpg" alt="Childhood photo 1">
+                    <img class="slide" src="images/child2.jpg" alt="Childhood photo 2">
+                    <!-- Recent photos -->
+                    <img class="slide" src="images/recent1.jpg" alt="Recent photo 1">
+                    <img class="slide" src="images/recent2.jpg" alt="Recent photo 2">
+                    <img class="slide" src="images/recent3.jpg" alt="Recent photo 3">
+                    <img class="slide" src="images/recent4.jpg" alt="Recent photo 4">
+                    <img class="slide" src="images/recent5.jpg" alt="Recent photo 5">
+                    <img class="slide" src="images/recent6.jpg" alt="Recent photo 6">
+                    <img class="slide" src="images/recent7.jpg" alt="Recent photo 7">
+                    <img class="slide" src="images/recent8.jpg" alt="Recent photo 8">
+                    <img class="slide" src="images/recent9.jpg" alt="Recent photo 9">
+                    <img class="slide" src="images/recent10.jpg" alt="Recent photo 10">
+                    <img class="slide" src="images/recent11.jpg" alt="Recent photo 11">
+                    <img class="slide" src="images/recent12.jpg" alt="Recent photo 12">
+                    <img class="slide" src="images/recent13.jpg" alt="Recent photo 13">
+                    <img class="slide" src="images/recent14.jpg" alt="Recent photo 14">
+                    <img class="slide" src="images/recent15.jpg" alt="Recent photo 15">
+                    <img class="slide" src="images/recent16.jpg" alt="Recent photo 16">
+                    <img class="slide" src="images/recent17.jpg" alt="Recent photo 17">
+                    <img class="slide" src="images/recent18.jpg" alt="Recent photo 18">
+                    <img class="slide" src="images/recent19.jpg" alt="Recent photo 19">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="assets/birthday_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
